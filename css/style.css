@@ -1,0 +1,167 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/sky.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper:active {
+    background-image: url(../images/png-klev-club-qgmx-p-billi-kherrington-png-26.png);
+    transition: all 2.5s ease-in;
+}
+
+.wrapper .sun {
+    height: 140px;
+    width: 140px;
+    background-color: #ffff00;
+    border: 20px dashed rgb(199, 186, 113, 1);
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+
+    -moz-background-clip: content;
+    -webkit-background-clip: content;
+    background-clip: content-box;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    animation: sun 5s linear 0s infinite alternate forwards;
+}
+
+.sun:hover {
+    animation-play-state: paused;
+}
+
+.sun:active {
+    transform: rotateZ(720deg);
+    transition: all 5s ease-out;
+    position: absolute;
+}
+
+
+@keyframes sun {
+    from, to {
+    top: 100px;
+    left: 5%;
+    }
+
+    25% {
+        top: 100px;
+        left: 80%;
+    }
+
+    50%{
+        top: 300px;
+        left: 50%;
+    }
+
+}
+
+.sun {
+    position: relative;
+    z-index: 1;
+}
+.wrapper .sun .eyes,
+.wrapper .sun .mouth {
+    width: 90px;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.wrapper .sun .eyes {
+    background-image: url(../images/pngegg.png);
+    top: 25px;
+    left: 25px;
+    position: relative;
+}
+
+.wrapper .sun .mouth {
+    background-image: url(../images/—Pngtree—black\ medical\ face\ mask\ on_6048944.png);
+    position: absolute;
+    top: 55px;
+    left: 25px;
+}
+
+.wrapper .item {
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    animation: clouds 10s linear 0s infinite alternate forwards;
+}
+
+.item {
+    position: relative;
+}
+
+.wrapper .clouds {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/Wind-Cloud-PNG-Free-Image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute; 
+}
+
+.clouds:hover {
+    transition: all 2.5s ease-in;
+    transform:skewX(-5deg) skewY(-15deg) scale(1.2);
+
+}
+
+@keyframes clouds {
+    form, to {
+        top: 50px;
+        left: 5%;
+    }
+
+    50% {
+        top: 50px;
+        left: 45%;
+    }
+}
+
+.wrapper .ground {
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/grass.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 70%;
+    z-index: 2;
+}
+
+.ground:hover {
+    transform: translate(0, -100px);
+}
+
+.wrapper .building {
+    width: 500px;
+    height: 500px;
+    background-image: url(../images/building.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    z-index: 3;
+}
+
+.building:hover {
+    transition:all 2s ease-in-out;
+    transform: scale3d( 1.5, 1.5, 0.5);
+}
